@@ -1,13 +1,9 @@
-import React, { Component } from "react";
+import { Component } from "react";
+import { ICellProps } from "../types/Cell";
 import "./cell.css";
 
-interface IProps {
-	flipCellsAroundMe: Function;
-	isLit: boolean;
-}
-
-class Cell extends Component<IProps> {
-	constructor(props: IProps) {
+class Cell extends Component<ICellProps> {
+	constructor(props: ICellProps) {
 		super(props);
 		this.handleClick = this.handleClick.bind(this);
 	}

@@ -1,20 +1,11 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import Cell from "../cell/Cell";
 import "./board.css";
+import { IBoardProps } from "../types/Board";
+import { IBoardState } from "../types/Board";
 
-interface IProps {
-	nrows: number;
-	ncols: number;
-	chanceLightStartsOn: number;
-}
-
-interface IState {
-	board: boolean[][];
-	hasWon: boolean;
-}
-
-class Board extends Component<IProps, IState> {
-	constructor(props: IProps) {
+class Board extends Component<IBoardProps, IBoardState> {
+	constructor(props: IBoardProps) {
 		super(props);
 		this.state = {
 			board: this.createBoard(),

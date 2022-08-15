@@ -2,7 +2,8 @@
 
 **Hi there!**
 
-- React tsx
+- React
+- Typescript
 
 ## Description
 
